@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Página de modelos{% endblock %}
+{% block navegation %}
+	<a href='{{url_for("listaMarcas",)}}'>
+		<button type="button" name="button">Vuelta a las marcas</button>
+	</a>
+{% endblock %}
+{% block content %}
+
+	<h2>Los modelos de la marca: </h2>
+	<h2>+{{miMarca.nombre}}</h2>
+
+	<a href='{{url_for("addModelo",marca=miMarca.id)}}'>
+		<button type="button" name="button">Crear nuevo modelo</button>
+	</a>
+
+	{% for modelo in misModelos %}
+		<a href='{{url_for("comprar",modelo=modelo.id)}}'>
+			<h3> {{modelo.rec_name}}</h3>
+		</a>
+	{% endfor %}
+	<h2>Los coches:</h2>	
+	{% for coche in misCoches %}
+		<h3> {{coche.modelo.rec_name}} | {{coche.propietario.name}} | {{coche.matricula}}</h3>
+	{% endfor %}
+{% endblock %}
+{% block footer %}
+	<h4>ESa es la lista de modelos</h1>
+	{{super()}}
+{% endblock %}

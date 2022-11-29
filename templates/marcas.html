@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Lista de coches{% endblock %}
+{% block content %}
+	{% for marca in misMarcas %}
+		<a href='{{url_for("listaModelosYCoches",marca_url=marca.nombre)}}'>
+			<h1>Hello {{marca.nombre}}</h1>
+		</a>
+	{% endfor %}	
+{% endblock %}
+{% block footer %}
+	<h4>Esa es la lista de marcas</h1>
+	{{super()}}
+{% endblock %}

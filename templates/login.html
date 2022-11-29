@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Página de login{% endblock %}
+{% block navegation %}
+	<a href='{{url_for("listaMarcas",)}}'>
+		<button type="button" name="button">Vuelta a las marcas</button>
+	</a>
+	<a href='{{url_for("listaModelosYCoches",marca_url=miMarca)}}'>
+		<button type="button" name="button">Vuelta a los modelos</button>
+	</a>
+{% endblock %}
+{% block content %}
+	<h1>Formulario para login:</h1>
+	<form action="" method="POST">
+		<h3>
+			<label>Email:</label>
+			<input type="text" name="username" value="" required>
+		</h3>
+		<h3>
+			<label>Password:</label>
+			<input type="text" name="password" value="" required>
+		</h3>
+		<button type="submit" name="button">Login</button>
+	</form>
+{% endblock %}

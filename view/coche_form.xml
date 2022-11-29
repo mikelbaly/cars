@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form>
+    <label name="matricula"/>
+    <field name="matricula"/>
+    <label name="marca"/>
+    <field name="marca"/>
+    <label name="modelo"/>
+    <field name="modelo"/>
+    <label name="propietario"/>
+    <field name="propietario"/>
+    <label name="precio"/>
+    <field name="precio"/>
+    <label name="fecha_matriculacion"/>
+    <field name="fecha_matriculacion"/>
+    <label name="fecha_baja"/>
+    <field name="fecha_baja"/>
+    <label name="cavallos"/>
+    <field name="cavallos"/>
+</form>

@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    cars = trytond.modules.cars
+    

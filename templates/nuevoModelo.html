@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Página de nuevo modelo{% endblock %}
+{% block navegation %}
+	<a href='{{url_for("listaMarcas",)}}'>
+		<button type="button" name="button">Vuelta a las marcas</button>
+	</a>
+	<a href='{{url_for("listaModelosYCoches",marca_url=miMarca)}}'>
+		<button type="button" name="button">Vuelta a los modelos</button>
+	</a>
+{% endblock %}
+{% block content %}
+	<h1>Formulario para nuevo modelo:</h1>
+	<form action="" method="POST">
+		<h3>
+			<label>Marca</label>
+			+{{miMarca.nombre}}
+		</h3>
+		<h3>
+			<label>Modelo</label>
+			<input type="text" name="modelo" value="" required>
+		</h3>
+		<h3>
+			<label>Combustible</label>
+			<select class="" name="combustible" required>
+				{% for value,string_usu in misCombustibles %}
+					<option value={{value}}>{{string_usu}}</option>
+				{% endfor %}
+			</select>
+		</h3>
+		<button type="submit" name="button">Comprar</button>
+	</form>
+{% endblock %}

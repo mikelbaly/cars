@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form>
+    <label name="marca"/>
+    <field name="marca"/>
+    <label name="modelo"/>
+    <field name="modelo"/>
+    <label name="fecha_lanzamiento "/>
+    <field name="fecha_lanzamiento"/>
+    <label name="combustible"/>
+    <field name="combustible"/>
+    <label name="cavallos"/>
+    <field name="cavallos"/>
+    <label name="precioModelo"/>
+    <field name="precioModelo"/>
+    <field name="productosDelModelo" colspan="4"/>
+</form>
