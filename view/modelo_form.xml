@@ -4,7 +4,7 @@
     <field name="marca"/>
     <label name="modelo"/>
     <field name="modelo"/>
-    <label name="fecha_lanzamiento "/>
+    <label name="fecha_lanzamiento"/>
     <field name="fecha_lanzamiento"/>
     <label name="combustible"/>
     <field name="combustible"/>

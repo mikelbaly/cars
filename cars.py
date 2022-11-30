@@ -179,9 +179,7 @@ class BajaCocheResultado(ModelView):
 
     @classmethod
     def default_n_coches_afectados(cls):
-        if len(Transaction().context['active_ids']):
-            return len(Transaction().context['active_ids'])
-        return 0
+        return len(Transaction().context.get('active_ids',[]))
 
 #reports
 class CocheReport(Report):
