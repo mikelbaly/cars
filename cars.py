@@ -47,7 +47,8 @@ class Modelo(ModelSQL,ModelView):
         marca = pool.get('cars.marca')
         marca1 = marca.search([],limit=1,
             order=[('nombre','ASC'),('id','ASC')])
-        return marca1[0].id
+        if len(marca1):
+            return marca1[0].id
 
 class Coche(ModelSQL,ModelView):
     "Coche"
@@ -157,7 +158,6 @@ class BajaCoche(Wizard):
         pool = Pool()
         Coche = pool.get('cars.coche')
         coches = Coche.browse(Transaction().context['active_ids'])
-        print(coches)
         for coche in coches:
             coche.fecha_baja = self.start.fecha_baja
         Coche.save(coches)
@@ -179,7 +179,9 @@ class BajaCocheResultado(ModelView):
 
     @classmethod
     def default_n_coches_afectados(cls):
-        return len(Transaction().context['active_ids'])
+        if len(Transaction().context['active_ids']):
+            return len(Transaction().context['active_ids'])
+        return 0
 
 #reports
 class CocheReport(Report):

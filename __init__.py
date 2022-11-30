@@ -12,7 +12,6 @@ def register():
         cars.Party,
         cars.Productos,
         cars.ModeloProducto,
-        cars.BajaCoche,
         cars.BajaCocheStart,
         cars.BajaCocheResultado,
         module='cars', type_='model')

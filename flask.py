@@ -6,7 +6,7 @@ from functools import wraps
 import os
 
 app = Flask(__name__)
-app.config['TRYTON_DATABASE'] = 'taller'
+app.config['TRYTON_DATABASE'] = 'tallerb'
 app.config.update(SECRET_KEY=os.urandom(24))
 tryton = Tryton(app,configure_jinja=True)
 Marca = tryton.pool.get('cars.marca')
